@@ -1,0 +1,200 @@
+/** 
+Main CSS file for project site
+*/
+
+.menuParent {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.menuChild {
+    flex: 1;
+    border: 3px solid white;
+    background-color: orange;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.top {
+    background-color: #faba6b;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    margin: 10px;
+    padding: 3px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    margin: 10px;
+    padding: 3px;
+}
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #faba6b;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    justify-content: center;
+
+}
+
+footer p {
+    border: 3px solid white;
+    display: inline-block;
+    padding: 7px;
+}
+
+p {
+    font-size: 22px;
+}
+
+.make_table img {
+    height: 128px;
+    width: 128px;
+}
+
+.make_table table {
+    overflow-x: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+}
+
+.make_table td {
+    padding: 15px;
+}
+
+.featured_table table {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+    border: 3px solid;
+}
+
+.featured_table td,
+tr {
+    border: 3px solid;
+    text-align: center;
+}
+
+.featured_table img {
+    width: 512px;
+    height: 288px;
+}
+
+.listing_table table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 3px;
+    border: 3px solid;
+    width: 800px;
+    height: 650px;
+}
+
+.listing_table td,
+tr {
+    border: 3px solid;
+    text-align: center;
+}
+
+.listing_table img {
+    width: 512px;
+    height: 288px;
+}
+
+.finance {
+    background-color: #faba6b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.finance table {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border: 3px solid white;
+}
+
+.finance p {
+    font-size: medium;
+}
+
+footer img {
+    height: 5%;
+    width: 5%;
+}
+
+/* Media query to resize large elements on mobile */
+@media screen and (max-width: 900px) {
+    .header img {
+        height: 70px;
+        width: 200px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .featured_table img {
+        height: 70px;
+        width: 138px;
+    }
+
+    .listing_table img {
+        height: auto;
+        width: 138px;
+    }
+
+    .make_table img {
+        height: 32px;
+        width: 32px;
+    }
+
+    .listing_table table {
+        width: 100%;
+    }
+
+    .listing_table tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .listing_table td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

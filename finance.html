@@ -1,0 +1,89 @@
+<!--
+    Author: Kevin Akerberg
+    Date: 3/13/2024
+    Assignment: Midterm Project 
+    Course: CSCE 464
+    File: finance.html
+
+    Financing page with Javascript form to calculate payments
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Financing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/financeFormSubmit.js"></script>
+</head>
+
+<body>
+    <main class="top">
+        <header class="header">
+            <a href="home.html"><img src="images/bmw_m3.jpg" width="768" height="280"></a>
+            <h1>Bids & Cars</h1>
+        </header>
+        <div class="menuParent">
+            <div class="menuChild">
+                <a href="home.html">Home</a>
+            </div>
+            <div class="menuChild">
+                <a href="newCars.html">New Cars</a>
+            </div>
+            <div class="menuChild">
+                <a href="usedCars.html">Used Cars</a>
+            </div>
+            <div class="menuChild">
+                <a href="finance.html">Financing</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+<div class="finance">
+    <h2>Auto Financing Calculator</h2>
+    <p>Use this caluclator to estimate your monthly payment on your new vehicle!</p>
+    <form id="financeForm" onsubmit="financeFormSubmit()">
+        <table>
+            <tr>
+                <td><label for="price">Vehicle price:</label></td>
+                <td><input id="price" type="number" name="price"></td>
+                <td><label for="trade">Trade in value:</label></td>
+                <td><input id="trade" type="number" name="trade"></td>
+                <td><label for="downpayment">Down payment:</label></td>
+                <td><input id="downpayment" type="number" name="downpayment"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Loan duration:</p>
+                </td>
+                <td>
+                    <input type="radio" id="24" name="duration" value="24" margin="auto">
+                    <label for="24">24 months</label>
+                </td>
+                <td><input type="radio" id="36" name="duration" value="36">
+                    <label for="36">36 months</label>
+                </td>
+                <td><input type="radio" id="48" name="duration" value="48">
+                    <label for="48">48 months</label>
+                </td>
+                <td><input type="radio" id="60" name="duration" value="60">
+                    <label for="60">60 months</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Calculate!">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<footer>
+    <p>Bids & Cars<br>
+        Author: Kevin Akerberg<br>
+        CSCE 464</p><br>
+    <a href="https://github.com/kakerberg/CSCE464_Midterm_Project_Akerberg"><img src="images/git.png"></a>
+</footer>
+
+</html>
