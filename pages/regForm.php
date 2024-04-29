@@ -13,7 +13,7 @@ session_start();
 
 <head>
     <title>Bids & Cars Registration</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
