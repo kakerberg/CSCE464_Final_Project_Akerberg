@@ -23,4 +23,8 @@
         include ("../php/registerUser.php"); // registers user data
         ?>
     </div>
+    <div>
+        <?php
+        header("Location: ../pages/home.html");
+        ?>
 </body>
