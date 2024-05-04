@@ -9,7 +9,8 @@
  */
 
 session_start();
-if (isset($_SESSION['customer_id'])) header('Location: estore.php');
+if (isset($_SESSION['username']))
+    header("Location: ../pages/home.html");
 $retrying = isset($_GET['retrying']) ? true : false;
 ?>
 
