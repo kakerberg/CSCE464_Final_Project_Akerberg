@@ -30,6 +30,13 @@ if (isset($selectValue)) {
 $newCars = mysqli_query($database, $query);
 
 while ($newCar = mysqli_fetch_array($newCars)) {
+    // webpage creation
+    $fileName = $newCar['make'].$newCar['model'].".php";
+    $fileName = str_replace(" ","", $fileName);
+    $individualPage = fopen($fileName, "w");
+
+    fwrite($individualPage, ""); // TODO: write template to each file
+
     echo "<table>
     <tr>
         <td>
@@ -40,7 +47,7 @@ while ($newCar = mysqli_fetch_array($newCars)) {
                     </tr>
                     <tr>
                         <td colspan='2'>
-                            <h1>{$newCar['modelYear']} {$newCar['make']} {$newCar['model']}</h1>
+                            <a href='$fileName'><h1>{$newCar['modelYear']} {$newCar['make']} {$newCar['model']}</h1></a>
                         </td>
                     </tr>
                     <tr>
