@@ -57,4 +57,3 @@ if (emailInDB($database, $_POST['email'])) {
     echo "<h3>Thank you for registering! Your data was successfully saved.</h3>";
 }
 mysqli_close($database);
-?>

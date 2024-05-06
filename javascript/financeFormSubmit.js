@@ -20,6 +20,6 @@ function financeFormSubmit() {
         totalMonthlyPayment = 0;
     }
 
-    var result = "Your estimated monthly payment is $" + totalMonthlyPayment.toFixed(2) + "!\n";
+    var result = "Your estimated monthly payment is $" + totalMonthlyPayment.toFixed(2) + "!\n" + "Your total interest on this loan will be $" + totalInterest.toFixed(2) + "!\n";
     alert(result);
 }

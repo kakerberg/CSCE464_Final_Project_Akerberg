@@ -32,13 +32,16 @@ $retrying = isset($_GET['retrying']) ? true : false;
                 <a href="home.html">Home</a>
             </div>
             <div class="menuChild">
-                <a href="newCars.html">New Cars</a>
+                <a href="newCars.php">New Cars</a>
             </div>
             <div class="menuChild">
-                <a href="usedCars.html">Used Cars</a>
+                <a href="usedCars.php">Used Cars</a>
             </div>
             <div class="menuChild">
                 <a href="finance.html">Financing</a>
+            </div>
+            <div class="menuChild">
+                <a href="sellCar.php">Sell Your Car</a>
             </div>
         </div>
         <div class="login">

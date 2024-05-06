@@ -12,9 +12,10 @@
 <html>
 
 <head>
-    <title>Financing</title>
+    <title>Financing & Leasing</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../javascript/financeFormSubmit.js"></script>
+    <script src="../javascript/leaseFormSubmit.js"></script>
 </head>
 
 <body>
@@ -30,13 +31,16 @@
                 <a href="home.html">Home</a>
             </div>
             <div class="menuChild">
-                <a href="newCars.html">New Cars</a>
+                <a href="newCars.php">New Cars</a>
             </div>
             <div class="menuChild">
-                <a href="usedCars.html">Used Cars</a>
+                <a href="usedCars.php">Used Cars</a>
             </div>
             <div class="menuChild">
-                <a href="finance.html">Financing</a>
+                <a href="finance.html">Financing & Leasing</a>
+            </div>
+            <div class="menuChild">
+                <a href="sellCar.php">Sell Your Car</a>
             </div>
         </div>
     </main>
@@ -44,7 +48,7 @@
 
 <div class="finance">
     <h2>Auto Financing Calculator</h2>
-    <p>Use this caluclator to estimate your monthly payment on your new vehicle!</p>
+    <p>Use this calculator to estimate your monthly payment on your new vehicle!</p>
     <form id="financeForm" onsubmit="financeFormSubmit()">
         <table>
             <tr>
@@ -60,6 +64,49 @@
             <tr>
                 <td>
                     <p>Loan duration:</p>
+                </td>
+                <td>
+                    <input type="radio" id="24" name="duration" value="24" margin="auto">
+                    <label for="24">24 months</label>
+                </td>
+                <td><input type="radio" id="36" name="duration" value="36">
+                    <label for="36">36 months</label>
+                </td>
+                <td><input type="radio" id="48" name="duration" value="48">
+                    <label for="48">48 months</label>
+                </td>
+                <td><input type="radio" id="60" name="duration" value="60">
+                    <label for="60">60 months</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Calculate!">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="lease">
+    <h2>Auto Leasing Calculator</h2>
+    <p>Use this calculator to estimate your monthly payment on an auto lease!</p>
+    <form id="financeForm" onsubmit="leaseFormSubmit()">
+        <table>
+            <tr>
+                <td><label for="price">Vehicle price:</label></td>
+                <td><input id="price" type="number" name="price"></td>
+                <td><label for="trade">Trade in value:</label></td>
+                <td><input id="trade" type="number" name="trade"></td>
+                <td><label for="downpayment">Down payment:</label></td>
+                <td><input id="downpayment" type="number" name="downpayment"></td>
+                <td><label for="residuperc">Residual percentage (%):</label></td>
+                <td><input id="residuperc" type="text" name="residuperc"></td>
+                <td><label for="moneyfactor">Money Factor (%):</label></td>
+                <td><input id="moneyfactor" type="text" name="moneyfactor"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Lease duration:</p>
                 </td>
                 <td>
                     <input type="radio" id="24" name="duration" value="24" margin="auto">

@@ -40,4 +40,3 @@ if (mysqli_connect_errno() || ($database == null)) {
     printf("Database connection failed: %s.", mysqli_connect_error());
     exit;
 }
-?>

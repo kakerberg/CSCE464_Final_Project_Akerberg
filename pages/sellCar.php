@@ -3,16 +3,16 @@
  * Kevin Akerberg
  * CSCE 464
  * Final Project
- * regForm.php
+ * sellCar.php
  * 
- * This file serves as the form a user enters their info into to register on a website
+ * This file serves as the form a user enters info in to sell their car
  */
 
 session_start();
 ?>
 
 <head>
-    <title>Bids & Cars Registration</title>
+    <title>Sell Your Car on Bids & Cars</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -41,35 +41,35 @@ session_start();
                 <a href="sellCar.php">Sell Your Car</a>
             </div>
         </div>
-        <div class="reg">
-            <h1>Welcome! Register with this form:</h1>
-            <form id="regForm" action="../php/regFormResponse.php" method="post">
+        <div class="sell">
+            <h1>Enter your info to sell your car on our website!</h1>
+            <form id="sellform" action="../php/sellFormResponse.php" method="post">
                 <table>
                     <tr>
-                        <td>First name:</td>
-                        <td><input required type="text" name="firstName"></td>
+                        <td>Year:</td>
+                        <td><input required type="number" name="year"></td>
                     </tr>
                     <tr>
-                        <td>Last name:</td>
-                        <td><input required type="text" name="lastName"></td>
+                        <td>Make:</td>
+                        <td><input required type="text" name="make"></td>
                     </tr>
                     <tr>
-                        <td>Email:</td>
-                        <td><input required type="text" name="email"></td>
+                        <td>Model:</td>
+                        <td><input required type="text" name="model"></td>
                     </tr>
                     <tr>
-                        <td>Phone number:</td>
-                        <td><input required type="text" name="phone"></td>
+                        <td>Mileage:</td>
+                        <td><input required type="number" name="mileage"></td>
                     </tr>
                     <tr>
-                        <td>Address:</td>
-                        <td><input required type="text" name="address"></td>
+                        <td>Asking price:</td>
+                        <td><input required type="number" name="price"></td>
                     </tr>
                     <tr>
-                        <td>Username:</td>
-                        <td><input required type="text" name="username"></td>
+                        <td>Image:</td> <!--TODO: figure out how to upload images to database and persist path to retrieve image -->
+                        <td><input required type="file" name="image" id="image"></td>
                     <tr>
-                        <td><input type="submit" value="Register"></td>
+                        <td><input type="submit" value="Sell!"></td>
                     </tr>
                 </table>
             </form>
