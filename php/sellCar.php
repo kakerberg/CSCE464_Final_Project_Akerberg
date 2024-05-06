@@ -10,13 +10,14 @@
  * 
  */
 
-$imagePath = "../images/";
-move_uploaded_file($_POST["image"],$imagePath);
+$imagePath = "../images/" . $_FILES['userfile']['name'];
+move_uploaded_file($_FILES['userfile']['tmp_name'],$imagePath);
 
 $query = "INSERT INTO usedCars(modelYear, make, model, price, mileage, imagePath)
-            VALUES('$_POST[year]', '$_POST[make]', '$_POST[model]', '$_POST[price]', '$_POST[mileage]', $imagePath);";
+            VALUES('$_POST[year]', '$_POST[make]', '$_POST[model]', '$_POST[price]', '$_POST[mileage]', '$imagePath');";
 
 $result = mysqli_query($database, $query);
+
 echo "<h3>Thank you for selling with us! Your data was successfully saved.</h3>";
 
 mysqli_close($database);

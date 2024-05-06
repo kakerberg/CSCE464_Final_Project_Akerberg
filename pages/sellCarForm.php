@@ -38,12 +38,12 @@ session_start();
                 <a href="finance.html">Financing</a>
             </div>
             <div class="menuChild">
-                <a href="sellCar.php">Sell Your Car</a>
+                <a href="sellCarForm.php">Sell Your Car</a>
             </div>
         </div>
         <div class="sell">
             <h1>Enter your info to sell your car on our website!</h1>
-            <form id="sellform" action="../php/sellFormResponse.php" method="post">
+            <form id="sellform" action="../php/sellFormResponse.php" method="post" enctype="multipart/form-data">
                 <table>
                     <tr>
                         <td>Year:</td>
@@ -67,7 +67,7 @@ session_start();
                     </tr>
                     <tr>
                         <td>Image:</td> <!--TODO: figure out how to upload images to database and persist path to retrieve image -->
-                        <td><input required type="file" name="image" id="image"></td>
+                        <td><input required type="file" name="userfile"></td>
                     <tr>
                         <td><input type="submit" value="Sell!"></td>
                     </tr>

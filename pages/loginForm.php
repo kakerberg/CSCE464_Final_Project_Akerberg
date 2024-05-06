@@ -41,7 +41,7 @@ $retrying = isset($_GET['retrying']) ? true : false;
                 <a href="finance.html">Financing</a>
             </div>
             <div class="menuChild">
-                <a href="sellCar.php">Sell Your Car</a>
+                <a href="sellCarForm.php">Sell Your Car</a>
             </div>
         </div>
         <div class="login">
