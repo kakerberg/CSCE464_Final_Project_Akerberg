@@ -9,7 +9,24 @@
 
 include ("../php/databaseConnect.php"); // connects to database
 
-$query = "SELECT * FROM usedCars";
+if (array_key_exists("sorting", $_POST)) {
+    $selectValue = $_POST["sorting"];
+}
+
+if (isset($selectValue)) {
+    if ($selectValue == "pricelotohi") {
+        $query = "SELECT * FROM usedCars ORDER BY price ASC";
+    } else if ($selectValue == "pricehitolo") {
+        $query = "SELECT * FROM usedCars ORDER BY price DESC";
+    } else if ($selectValue == "milelotohi") {
+        $query = "SELECT * FROM usedCars ORDER BY mileage ASC";
+    } else if ($selectValue == "milehitolo") {
+        $query = "SELECT * FROM usedCars ORDER BY mileage DESC";
+    }
+} else {
+    $query = "SELECT * FROM usedCars";
+}
+
 $usedCars = mysqli_query($database, $query);
 
 while ($usedCar = mysqli_fetch_array($usedCars)) {

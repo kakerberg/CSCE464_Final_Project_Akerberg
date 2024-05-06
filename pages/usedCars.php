@@ -44,6 +44,16 @@ session_start();
         </div>
         <div class="main">
             <h1>Used Vehicles</h1>
+            <label for="sorting">Sort by:</label>
+            <form action="" method="post">
+                <select name="sorting" id="sorting">
+                    <option value="pricelotohi">Price (low to high)</option>
+                    <option value="pricehitolo">Price (high to low)</option>
+                    <option value="milelotohi">Mileage (low to high)</option>
+                    <option value="milehitolo">Mileage (high to low)</option>
+                </select>
+                <input type="submit" name="submit" value="Sort" />
+            </form>
             <?php
             include ("../php/getUsedListings.php");
             ?>

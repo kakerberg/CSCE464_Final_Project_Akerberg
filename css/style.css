@@ -166,6 +166,10 @@ tr {
     font-size: medium;
 }
 
+select {
+    margin-right: auto;
+}
+
 footer img {
     height: 5%;
     width: 5%;
