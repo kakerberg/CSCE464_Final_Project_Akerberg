@@ -5,22 +5,21 @@ function financeFormSubmit() {
     var listPrice = document.getElementById("price").value;
     var tradeIn = document.getElementById("trade").value;
     var downPayment = document.getElementById("downpayment").value;
-    var interestRate = document.querySelector("interestrate").value;
-    var duration = Number(document.querySelector('input[name="duration"]:checked').value);
+    var interestRate = document.getElementById("interestrate").value;
+    var duration = document.querySelector('input[name="duration"]:checked').value;
 
+
+    var interestRatePer = Number(interestRate) / 100;
     var totalPrice = listPrice - tradeIn - downPayment;
-    console.log(totalPrice);
-    var totalInterest = totalPrice * interestRate;
-    console.log(interestRate);
-    console.log(totalInterest);
+    var totalInterest = totalPrice * interestRatePer;
     var monthlyPayment = totalPrice / duration;
     var monthlyInterest = totalInterest / duration;
-    var monthlyPaymentRound = monthlyPayment.toFixed(2) + monthlyInterest.toFixed(2);
+    var totalMonthlyPayment = monthlyPayment + monthlyInterest;
 
     if (totalPrice <= 0) {
-        monthlyPaymentRound = 0;
+        totalMonthlyPayment = 0;
     }
 
-    var result = "Your estimated monthly payment is $" + monthlyPaymentRound + "!\n";
+    var result = "Your estimated monthly payment is $" + totalMonthlyPayment.toFixed(2) + "!\n";
     alert(result);
 }
