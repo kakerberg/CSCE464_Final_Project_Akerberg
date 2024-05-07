@@ -31,11 +31,11 @@ $newCars = mysqli_query($database, $query);
 
 while ($newCar = mysqli_fetch_array($newCars)) {
     // webpage creation
-    $fileName = $newCar['make'].$newCar['model'].".php";
-    $fileName = str_replace(" ","", $fileName);
+    $fileName = $newCar['make'] . $newCar['model'] . $newCar['carId'] . ".php";
+    $fileName = str_replace(" ", "", $fileName);
     $individualPage = fopen($fileName, "w");
 
-    fwrite($individualPage, ""); // TODO: write template to each file
+    fwrite($individualPage, file_get_contents("../pages/listingTemplate.php"));
 
     echo "<table>
     <tr>
@@ -43,7 +43,7 @@ while ($newCar = mysqli_fetch_array($newCars)) {
             <div class='listing_table'>
                 <table>
                     <tr>
-                        <td colspan='2'><img src='{$newCar['imagePath']}'></td>
+                        <td colspan='2'><a href='$fileName'><img src='{$newCar['imagePath']}'></a></td>
                     </tr>
                     <tr>
                         <td colspan='2'>

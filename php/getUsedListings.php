@@ -30,17 +30,24 @@ if (isset($selectValue)) {
 $usedCars = mysqli_query($database, $query);
 
 while ($usedCar = mysqli_fetch_array($usedCars)) {
+    // webpage creation
+    $fileName = $usedCar['make'] . $usedCar['model'] . $usedCar['carId'] . ".php";
+    $fileName = str_replace(" ", "", $fileName);
+    $individualPage = fopen($fileName, "w");
+
+    fwrite($individualPage, file_get_contents("../pages/listingTemplateUsed.php"));
+
     echo "<table>
     <tr>
         <td>
             <div class='listing_table'>
                 <table>
                     <tr>
-                        <td colspan='2'><img src='{$usedCar['imagePath']}'></td>
+                        <td colspan='2'><a href='$fileName'><img src='{$usedCar['imagePath']}'></a></td>
                     </tr>
                     <tr>
                         <td colspan='2'>
-                            <h1>{$usedCar['modelYear']} {$usedCar['make']} {$usedCar['model']}</h1>
+                            <a href='$fileName'><h1>{$usedCar['modelYear']} {$usedCar['make']} {$usedCar['model']}</h1></a>
                         </td>
                     </tr>
                     <tr>
