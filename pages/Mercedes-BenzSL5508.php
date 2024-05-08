@@ -24,7 +24,7 @@ $usedCar = mysqli_fetch_array($usedCars);
 
 <head>
     <title><?php
-    echo $newCar['modelYear'] . " " . $newCar['make'] . " " . $newCar['model'] ?></title>
+    echo $usedCar['modelYear'] . " " . $usedCar['make'] . " " . $usedCar['model'] ?></title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -76,7 +76,7 @@ $usedCar = mysqli_fetch_array($usedCars);
                 </table>
             </div>
             <div class="contactform">
-                <form id="contactForm" action="" method="post">
+                <form id="contactForm" action="../php/contactForm.php" method="post">
                     <table>
                         <tr>
                             <td>First name:</td>

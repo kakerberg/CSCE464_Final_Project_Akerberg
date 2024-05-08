@@ -75,7 +75,7 @@ $newCar = mysqli_fetch_array($newCars);
                 </table>
             </div>
             <div class="contactform">
-                <form id="contactForm" action="" method="post">
+                <form id="contactForm" action="../php/contactForm.php" method="post">
                     <table>
                         <tr>
                             <td>First name:</td>
