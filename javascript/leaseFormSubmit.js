@@ -2,11 +2,11 @@
 // Driver function that computes the monthly payment for the provided inputs
 
 function leaseFormSubmit() {
-    var listPrice = document.getElementById("price").value;
-    var tradeIn = document.getElementById("trade").value;
-    var downPayment = document.getElementById("downpayment").value;
-    var residu = document.getElementById("residuperc").value;
-    var moneyFactor = document.getElementById("moneyfactor").value;
+    var listPrice = document.getElementById("leaseprice").value;
+    var tradeIn = document.getElementById("leasetrade").value;
+    var downPayment = document.getElementById("leasedownpayment").value;
+    var residu = document.getElementById("leaseresiduperc").value;
+    var moneyFactor = document.getElementById("leasemoneyfactor").value;
     var duration = document.querySelector('input[name="duration"]:checked').value;
 
     var residuPerc = Number(residu) / 100;
