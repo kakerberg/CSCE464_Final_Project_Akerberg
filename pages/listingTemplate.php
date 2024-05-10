@@ -12,7 +12,12 @@ session_start();
 include ("../php/dataBaseConnect.php");
 
 $fileName = basename(__FILE__, '.php');
-$carId = substr($fileName, -1);
+$carId = substr($fileName, -2);
+
+if(substr($carId,0,1) == '0') {
+    $carId = substr($carId,-1);
+}
+
 
 $query = "SELECT * FROM newCars WHERE carId = " . $carId;
 $newCars = mysqli_query($database, $query);

@@ -298,7 +298,7 @@ values(
 		"SL550",
 		21000,
 		43001,
-		"../images/750il.jpg"
+		"../images/sl550.jpeg"
 	);
 insert into usedCars(
 		modelYear,
