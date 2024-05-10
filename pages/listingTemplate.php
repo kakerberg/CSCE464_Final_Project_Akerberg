@@ -14,7 +14,7 @@ include ("../php/dataBaseConnect.php");
 $fileName = basename(__FILE__, '.php');
 $carId = substr($fileName, -2);
 
-if(substr($carId,0,1) == '0') {
+if(substr($carId,0,1) != '1') {
     $carId = substr($carId,-1);
 }
 

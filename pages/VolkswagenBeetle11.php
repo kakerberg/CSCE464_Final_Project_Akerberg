@@ -18,10 +18,9 @@ if(substr($carId,0,1) != '1') {
     $carId = substr($carId,-1);
 }
 
-
-$query = "SELECT * FROM newCars WHERE carId = " . $carId;
-$newCars = mysqli_query($database, $query);
-$newCar = mysqli_fetch_array($newCars);
+$query = "SELECT * FROM usedCars WHERE carId = " . $carId;
+$usedCars = mysqli_query($database, $query);
+$usedCar = mysqli_fetch_array($usedCars);
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,7 @@ $newCar = mysqli_fetch_array($newCars);
 
 <head>
     <title><?php
-    echo $newCar['modelYear'] . " " . $newCar['make'] . " " . $newCar['model'] ?></title>
+    echo $usedCar['modelYear'] . " " . $usedCar['make'] . " " . $usedCar['model'] ?></title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -62,19 +61,20 @@ $newCar = mysqli_fetch_array($newCars);
             <div class='listing_table_indiv'>
                 <table>
                     <tr>
-                        <td colspan='2'><img src=<?php echo $newCar['imagePath'] ?> </td>
+                        <td colspan='2'><img src=<?php echo $usedCar['imagePath'] ?> </td>
                     </tr>
                     <tr>
                         <td colspan='2'>
-                            <h1><?php echo $newCar['modelYear'] . " " . $newCar['make'] . " " . $newCar['model'] ?></h1>
+                            <h1><?php echo $usedCar['modelYear'] . " " . $usedCar['make'] . " " . $usedCar['model'] ?>
+                            </h1>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>List price: <?php echo "$" . $newCar['price'] ?></p>
+                            <p>List price: <?php echo "$" . $usedCar['price'] ?></p>
                         </td>
                         <td>
-                            <p>Mileage: <?php echo $newCar['mileage'] . " miles" ?></p>
+                            <p>Mileage: <?php echo $usedCar['mileage'] . " miles" ?></p>
                         </td>
                     </tr>
                 </table>
