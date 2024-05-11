@@ -9,8 +9,6 @@
  */
 
 session_start();
-// if (isset($_SESSION['username']))
-//     header("Location: ../pages/home.html");
 $retrying = isset($_GET['retrying']) ? true : false;
 ?>
 
