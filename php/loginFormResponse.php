@@ -12,7 +12,7 @@ session_start();
 include ("../php/dataBaseConnect.php");
 
 $query = "SELECT * FROM Customers WHERE username = '$_POST[username]'";
-$validCustomers = mysqli_query($db, $query);
+$validCustomers = mysqli_query($database, $query);
 $numValidCustomers = mysqli_num_rows($validCustomers);
 
 if ($numValidCustomers == 0) {
@@ -26,9 +26,10 @@ if ($numValidCustomers == 1) {
         $_SESSION['lastName'] = $row['lastName'];
         $_SESSION['phone'] = $row['phone'];
         $_SESSION['username'] = $row['username'];
+        header("Location: ../pages/home.html");
     } else {
         header("Location: ../pages/loginForm.php?retrying=true");
     }
 }
-mysqli_close($db);
+mysqli_close($database);
 ?>

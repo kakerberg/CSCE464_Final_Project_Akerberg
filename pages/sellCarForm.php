@@ -35,7 +35,7 @@ session_start();
                 <a href="usedCars.php">Used Cars</a>
             </div>
             <div class="menuChild">
-                <a href="finance.html">Financing</a>
+                <a href="finance.html">Financing & Leasing</a>
             </div>
             <div class="menuChild">
                 <a href="sellCarForm.php">Sell Your Car</a>
@@ -66,7 +66,8 @@ session_start();
                         <td><input required type="number" name="price"></td>
                     </tr>
                     <tr>
-                        <td>Image:</td> <!--TODO: figure out how to upload images to database and persist path to retrieve image -->
+                        <td>Image:</td>
+                        <!--TODO: figure out how to upload images to database and persist path to retrieve image -->
                         <td><input required type="file" name="userfile"></td>
                     <tr>
                         <td><input type="submit" value="Sell!"></td>

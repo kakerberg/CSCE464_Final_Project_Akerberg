@@ -50,8 +50,8 @@ if (emailInDB($database, $_POST['email'])) {
         echo "<h3>Username already exists, assigned username $unique_login instead</h3>";
     }
 
-    $query = "INSERT INTO Customers(email, firstName, lastName, phone, address, username) 
-              VALUES ('$_POST[email]', '$_POST[firstName]', '$_POST[lastName]', '$_POST[phone]', '$_POST[address]', '$unique_login');";
+    $query = "INSERT INTO Customers(email, firstName, lastName, phone, address, username, password) 
+              VALUES ('$_POST[email]', '$_POST[firstName]', '$_POST[lastName]', '$_POST[phone]', '$_POST[address]', '$unique_login', '$_POST[password]');";
 
     $good_insertion = mysqli_query($database, $query);
     echo "<h3>Thank you for registering! Your data was successfully saved.</h3>";

@@ -8,7 +8,8 @@ create table if not exists Customers(
 	lastName varchar(255) not null,
 	phone varchar(255) not null,
 	address varchar(255) not null,
-	username varchar(255) not null
+	username varchar(255) not null,
+	password varchar(255) not null
 );
 create table if not exists newCars(
 	carId int primary key not null auto_increment,

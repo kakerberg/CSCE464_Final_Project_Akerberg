@@ -35,7 +35,7 @@ session_start();
                 <a href="usedCars.php">Used Cars</a>
             </div>
             <div class="menuChild">
-                <a href="finance.html">Financing</a>
+                <a href="finance.html">Financing & Leasing</a>
             </div>
             <div class="menuChild">
                 <a href="sellCarForm.php">Sell Your Car</a>
@@ -68,6 +68,10 @@ session_start();
                     <tr>
                         <td>Username:</td>
                         <td><input required type="text" name="username"></td>
+                    <tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input required type="password" name="password"></td>
                     <tr>
                         <td><input type="submit" value="Register"></td>
                     </tr>

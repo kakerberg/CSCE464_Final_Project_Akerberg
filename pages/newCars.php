@@ -36,7 +36,7 @@ session_start();
                 <a href="usedCars.php">Used Cars</a>
             </div>
             <div class="menuChild">
-                <a href="finance.html">Financing</a>
+                <a href="finance.html">Financing & Leasing</a>
             </div>
             <div class="menuChild">
                 <a href="sellCarForm.php">Sell Your Car</a>
@@ -52,7 +52,7 @@ session_start();
                     <option value="milelotohi">Mileage (low to high)</option>
                     <option value="milehitolo">Mileage (high to low)</option>
                 </select>
-                <input type="submit" name="submit" value="Sort"/>
+                <input type="submit" name="submit" value="Sort" />
             </form>
             <?php
             include ("../php/getNewListings.php");

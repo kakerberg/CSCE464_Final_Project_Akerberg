@@ -9,8 +9,8 @@
  */
 
 session_start();
-if (isset($_SESSION['username']))
-    header("Location: ../pages/home.html");
+// if (isset($_SESSION['username']))
+//     header("Location: ../pages/home.html");
 $retrying = isset($_GET['retrying']) ? true : false;
 ?>
 
@@ -38,7 +38,7 @@ $retrying = isset($_GET['retrying']) ? true : false;
                 <a href="usedCars.php">Used Cars</a>
             </div>
             <div class="menuChild">
-                <a href="finance.html">Financing</a>
+                <a href="finance.html">Financing & Leasing</a>
             </div>
             <div class="menuChild">
                 <a href="sellCarForm.php">Sell Your Car</a>
@@ -46,15 +46,15 @@ $retrying = isset($_GET['retrying']) ? true : false;
         </div>
         <div class="login">
             <h1>Welcome back! Login here:</h1>
-            <form id="loginform" action="../php/loginFormResponse" method="post">
+            <form id="loginform" action="../php/loginFormResponse.php" method="post">
                 <table>
                     <tr>
                         <td>Username:</td>
-                        <td><input required type="text" name="username"></td>
+                        <td><input type="text" name="username"></td>
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td><input required type="text" name="password"></td>
+                        <td><input type="password" name="password"></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="login"></td>
@@ -69,7 +69,6 @@ $retrying = isset($_GET['retrying']) ? true : false;
                                 <br>Please try again to enter correct login information.
                             </td>
                         </tr>
-
                     <?php } ?>
                 </table>
             </form>

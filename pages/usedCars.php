@@ -36,7 +36,7 @@ session_start();
                 <a href="usedCars.php">Used Cars</a>
             </div>
             <div class="menuChild">
-                <a href="finance.html">Financing</a>
+                <a href="finance.html">Financing & Leasing</a>
             </div>
             <div class="menuChild">
                 <a href="sellCarForm.php">Sell Your Car</a>
